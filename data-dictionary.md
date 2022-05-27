@@ -1,6 +1,6 @@
 
 # Common data dictinoary
-## trade_v2
+## trade_v1
 
 ```mermaid
 erDiagram
