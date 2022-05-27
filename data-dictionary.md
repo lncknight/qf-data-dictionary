@@ -1,5 +1,6 @@
 
-# common data
+# Common data dictinoary
+## trade_v2
 
 ```mermaid
 erDiagram
@@ -49,7 +50,7 @@ erDiagram
 ```
 
 # rule 2 data
-
+## trade_r2
 ```mermaid
 erDiagram
   trade_r2 {
@@ -62,45 +63,26 @@ erDiagram
   }
 ```
 
-# rule 7 data
-
-```mermaid
-erDiagram
-  gmv_v2{
-    string userid "Store ID"
-    string sid "Store ID"
-    timestamp sysdtm_1h "* txn time round in 1 hour"
-    timestamp gmv_1h "* sum of gmv in current 1 hour"
-    timestamp gmv_last_1h "* sum of gmv in previous 1 hour"
-    boolean sig_170pc "indicator gmv_1h > gmv_last_1h * 170%"
-    boolean sig_200pc "indicator gmv_1h > gmv_last_1h * 200%"
-    boolean sig_300pc "indicator gmv_1h > gmv_last_1h * 300%"
-  }
-```
-
-# rule 7 analysis
+# Analyse idea
 
 ```mermaid
 graph TD
-    d[(Data: GMV 1h)] --> a["Analysis (QS)"]
-    a --> tl[Visual: top list]
-    a --> bd[Visual: break down Visual]
-    tl -->|1. select sid| bd
-    bd -.-> |"2. try out different threshold (e.g. 170%)"| bd
+    d[(Dataset HK)] --> dataset[(Dataset)]
+    d2[(Dataset BJ)] --> dataset
+    d3[(Dataset supporting data)] --> dataset
 
-    bd -.-> adjust[\3. adjust filter sid group/]
-    adjust -.-> bd
-    adjust -.-> tl
-```
+    subgraph Quicksight platform
+      dataset --> qs["Analyse - Quicksight"]
 
-# rule 2 data
+      qs --> tl[Visual: top list]
+      qs --> bd[Visual: break down Visual]
+      qs --> others[Visual: Other analyse insight]
 
-```mermaid
-erDiagram
-  txn_v4 {
-    string w5m_cnt
-    string sig_over50
-    string sig_over100
-    string sig_over200
-  }
+      tl -->|1. select filter, e.g. SID/MID, time| bd
+      bd -.-> |"2. try out different threshold (e.g. 170%)"| bd
+
+      bd -.-> adjust[\3. adjust filters/]
+      adjust -.-> bd
+      adjust -.-> tl
+    end
 ```
