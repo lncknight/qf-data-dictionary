@@ -1,6 +1,8 @@
 
-# Common data dictinoary
-## trade_v1
+# Data dictinoary
+
+## trade_v1 dataset
+`trade_1` is the raw transaction data (`trade_v1`). Every row represents a single transaction.
 
 ```mermaid
 erDiagram
@@ -49,8 +51,10 @@ erDiagram
   }
 ```
 
-# rule 2 data
-## trade_r2
+## trade_r2 dataset
+`trade_r2` is the transaction data group by **ONE MINUTE** of the raw transaction data (`trade_v1`). 
+`trade_r2` is an extended dataset **based on `trade_v1`**, more data, more custom columns are added.
+
 ```mermaid
 erDiagram
   trade_r2 {
