@@ -1,5 +1,5 @@
 
-# Data dictinoary
+# Data dictionary
 
 ## trade_v1 dataset
 `trade_1` is the raw transaction data (`trade_v1`). Every row represents a single transaction.
