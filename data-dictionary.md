@@ -67,7 +67,7 @@ erDiagram
   }
 ```
 
-## trade_r5_week dataset
+## trade_r5_week dataset (weekly grouped ONLY for demo purpose)
 `trade_r5_week` is the transaction data group by **ONE WEEK** of the raw transaction data (`trade_v1`). 
 `trade_r5_week` is an extended dataset **based on `trade_v1`**, more data, more custom columns are added.
 
@@ -94,6 +94,30 @@ erDiagram
   }
 ```
 
+## trade_r6 dataset
+`trade_r6` is the transaction data group by **ONE DAY** of the raw transaction data (`trade_v1`).
+`trade_r6` is an extended dataset **based on `trade_v1`**, more data, more statistic columns in 1-month window are added.
+
+```mermaid
+erDiagram
+  trade_r6 {
+
+    integer daily_ticket_size "current day ticket size"
+    integer win1mo_daily_ticket_size "average daily ticket size in last 1-month window"
+    integer win1mo_daily_ticket_size_Npc "mutiplied threshold of `win1mo_daily_ticket_size`"
+    integer win1mo_daily_ticket_size_Npc_pcdiff "percentage difference of win1mo_daily_ticket_size vs win1mo_daily_ticket_size_Npc"
+
+    integer daily_gmv "current day GMV"
+    integer win1mo_daily_gmv "average daily GMV in last 1-month window"
+    integer win1mo_daily_gmv_Npc "mutiplied threshold of `win1mo_daily_gmv`"
+    integer win1mo_daily_gmv_Npc_pcdiff "percentage difference of win1mo_daily_gmv vs win1mo_daily_gmv_Npc"
+
+    integer dailycount "no of daily txn in current day"
+    integer win1mo_dailycount "no of daily txn in last 1-month window"
+    integer win1mo_dailycount_Npc "mutiplied threshold of `win1mo_dailycount`"
+    integer win1mo_dailycount_Npc_pcdiff "percentage difference of win1mo_dailycount vs win1mo_dailycount_Npc_pcdiff"
+  }
+```
 
 # Analyse idea
 
