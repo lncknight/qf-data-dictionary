@@ -7,8 +7,8 @@
 ```mermaid
 erDiagram
   merchant {
-   string nickname "merchant name" 
-   string mid "merchant id"
+    string nickname "merchant name" 
+    string mid "merchant id"
 
     string risk_level_initial
     string risk_level_ongoing
@@ -20,7 +20,7 @@ erDiagram
     string mcc_group "group short name of mcc"
 
     string sid "Store ID *store-level"
-    string user "Store ID *store-level"
+    string userid "Store ID *store-level" 
 
     string source "online / offline *store-level"
   }
