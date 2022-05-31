@@ -72,7 +72,7 @@ erDiagram
 `trade_r5_week` is an extended dataset **based on `trade_v1`**, more data, more custom columns are added.
 
 ** the correct dataset `trade_r6` will be added.
-`trade_r5` is the transaction data group by **ONE DAY** of the raw transaction data (`trade_v1`).
+`trade_r6` is the transaction data group by **ONE DAY** of the raw transaction data (`trade_v1`).
 
 ```mermaid
 erDiagram
@@ -80,17 +80,17 @@ erDiagram
     integer count "count of trx in week (per MID dimension)"
     integer amount "sum of trx amount in week (per MID dimension)"
 
-    integer win1week_avg_ticket "average ticket size of last week"
-    integer win1week_avg_ticket_Npc "mutiplied threshold of average ticket size of last week"
-    integer win1week_avg_ticket_Npc_pcdiff "percentage difference of the mutiplied threshold of average ticket size of last week with current"
+    integer win1week_avg_ticket "average ticket size last week"
+    integer win1week_avg_ticket_Npc "mutiplied threshold of average ticket size last week"
+    integer win1week_avg_ticket_Npc_pcdiff "percentage difference of the mutiplied threshold of average ticket size last week with current"
 
-    integer win1week_count "average ticket size of last week"
-    integer win1week_count_Npc "mutiplied threshold of average ticket size of last week"
-    integer win1week_count_Npc_pcdiff "percentage difference of the mutiplied threshold of average ticket size of last week with current"
+    integer win1week_count "count of trx last week"
+    integer win1week_count_Npc "mutiplied threshold of count of trx last week"
+    integer win1week_count_Npc_pcdiff "percentage difference of the mutiplied threshold of average ticket size last week with current"
 
-    integer win1week_amount "average ticket size of last week"
-    integer win1week_amount_Npc "mutiplied threshold of average ticket size of last week"
-    integer win1week_avg_ticket_Npc_pcdiff "percentage difference of the mutiplied threshold of average ticket size of last week with current"
+    integer win1week_amount "total trx amount last week"
+    integer win1week_amount_Npc "mutiplied threshold of total trx amount last week"
+    integer win1week_avg_ticket_Npc_pcdiff "percentage difference of the mutiplied threshold of total trx amount last week with current"
   }
 ```
 
