@@ -101,6 +101,7 @@ erDiagram
 ```mermaid
 erDiagram
   trade_r6 {
+    datetime sysdtm_day "txn time truncated in day, e.g. 2022-05-23 00:00:00"
 
     integer daily_ticket_size "current day ticket size"
     integer win1mo_daily_ticket_size "average daily ticket size in last 1-month window"
