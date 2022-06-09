@@ -125,11 +125,13 @@ erDiagram
 
 ## trade_r15 dataset
 `trade_r15` is the transaction data grouped by same amount of the raw transaction data (`trade_v1`).
+`trade_r15` is an extended dataset **based on `trade_v1`**, more data, more custom columns are added.
+
 ```mermaid
 erDiagram
   trade_r15 {
     datetime sysdtm_day "txn time truncated in day, e.g. 2022-05-23 00:00:00"
-
+    integer daily_sameamount_gt10k_count "the count of same amount greater than 10k"
   }
 ```
 
