@@ -123,6 +123,16 @@ erDiagram
   }
 ```
 
+## trade_r15 dataset
+`trade_r15` is the transaction data grouped by same amount of the raw transaction data (`trade_v1`).
+```mermaid
+erDiagram
+  trade_r15 {
+    datetime sysdtm_day "txn time truncated in day, e.g. 2022-05-23 00:00:00"
+
+  }
+```
+
 # Analyse idea
 
 ```mermaid
