@@ -118,6 +118,9 @@ erDiagram
     integer win1mo_dailycount_Npc "mutiplied threshold of `win1mo_dailycount`"
     integer win1mo_dailycount_Npc_pcdiff "percentage difference of win1mo_dailycount vs win1mo_dailycount_Npc_pcdiff"
     integer daily_ticket_size_allmerchant "current day ticket size of all merchants"
+    integer daily_ticket_size_allmerchant_NPC "mutiplied threshold of `daily_ticket_size_allmerchant`"
+    integer daily_ticket_size_allmerchant_NPC_pcdif "percentage difference of daily_ticket_size_allmerchant vs daily_ticket_size_allmerchant_NPC"
+"
   }
 ```
 
