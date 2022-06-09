@@ -120,7 +120,6 @@ erDiagram
     integer daily_ticket_size_allmerchant "current day ticket size of all merchants"
     integer daily_ticket_size_allmerchant_NPC "mutiplied threshold of `daily_ticket_size_allmerchant`"
     integer daily_ticket_size_allmerchant_NPC_pcdif "percentage difference of daily_ticket_size_allmerchant vs daily_ticket_size_allmerchant_NPC"
-"
   }
 ```
 
